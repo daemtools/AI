@@ -45,4 +45,4 @@ jobs:
       uses: iterative/cml@v1
 
     - name: Run CML Workflow
-        run: cml-runner --token ${{ secrets.GITHUB_TOKEN }}
+      run: cml-runner --token ${{ secrets.GITHUB_TOKEN }}
