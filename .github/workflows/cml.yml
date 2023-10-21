@@ -18,11 +18,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Set up CML
+        uses: iterative/setup-cml@v2
+
       - name: Generate Report
         run: |
-          python new_model.py
-
-      - run: |
           python new_model.py --output report.html
           echo '![](./report.html)' >> report.md
           cml comment create --publish report.md
