@@ -20,7 +20,7 @@ jobs:
 
     - name: Install Dependencies
       run: pip install -r requirements.txt
-      
+
     - name: List Files
       run: ls -l
 
@@ -40,3 +40,9 @@ jobs:
           echo "Synthetic results do not match expected results."
           exit 1
         fi
+
+    - name: Set up CML
+        uses: iterative/cml@v1
+
+    - name: Run CML Workflow
+        run: cml-runner --token ${{ secrets.GITHUB_TOKEN }}
