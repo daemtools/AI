@@ -79,26 +79,26 @@ def visualize_examples(X, y, model, num_examples=2):
     plt.tight_layout()
     plt.savefig('visualizations.png', format='png')
     plt.close()
+    print("Visualization results saved to png file")
 
-def save_results(model_matrix, model_accuracy, report, X_test, y_test, num_examples, file_path):
-    '''Запись результатов в html-файл'''
-    visualize_examples(X_test, y_test, model, num_examples)
-    report_text = f"<h1>Classification Report</h1>\n"
-    report_text += f"<h2>Model Accuracy: {model_accuracy:.2f}</h2>\n"
-    report_text += f"<h3>Confusion Matrix:</h3>\n{pd.DataFrame(model_matrix, columns=['Predicted Benign', 'Predicted Malignant'], index=['Actual Benign', 'Actual Malignant']).to_html()}\n"
-    report_text += f"<h3>Classification Report:</h3>\n<pre>{report}</pre>\n"
-    report_text += f"<h3>Visualizations:</h3>\n<img src='visualizations.png' alt='Visualizations'>\n"
-
+def save_results(model_matrix, model_accuracy, report, file_path):
+    '''Запись результатов в файл'''
+    model_matrix_df = pd.DataFrame(model_matrix, columns=['Predicted Benign', 'Predicted Malignant'], index=['Actual Benign', 'Actual Malignant'])
     with open(file_path, "w") as file:
-        file.write(report_text)
+        file.write("Confusion Matrix:\n")
+        file.write(model_matrix_df.to_string() + "\n\n")
+        file.write("Accuracy: " + str(round(model_accuracy, 2)))
+        file.write("\n\n" + "Report:\n")
+        file.write(report)
 
 if __name__ == "__main__":
     cancer = load_breast_cancer_data()
     X, y = preprocess_data(cancer)
     X_train, X_test, y_train, y_test = split_data(X, y)
     model, model_matrix, model_accuracy, report = train_and_evaluate_model(X_train, y_train, X_test, y_test)
-    file_path = "report.html"
     num_examples = 2
-    save_results(model_matrix, model_accuracy, report, X_test, y_test, num_examples, file_path)
+    visualize_examples(X_test, y_test, model, num_examples)
+    file_path = "predict.txt"
+    save_results(model_matrix, model_accuracy, report, file_path)
     print("Classification results saved to", file_path)
     warnings.filterwarnings("ignore", category=ConvergenceWarning)
