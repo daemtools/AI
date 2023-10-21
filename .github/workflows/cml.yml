@@ -1,28 +1,28 @@
-version: 1
-workflows:
-  version: 2
+name: CML Tests
+on:
+  push:
+    branches:
+      - main
+jobs:
   ml-model-training:
-    on:
-      push:
-        branches:
-          - main
-    jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11.2
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Generate Report
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v2
+        run: |
+          python new_model.py
 
-          - name: Set up Python
-            uses: actions/setup-python@v2
-            with:
-              python-version: 3.11.2
-
-          - name: Install dependencies
-            run: pip install -r requirements.txt
-
-          - name: Generate Report
-            run: |
-              python new_model.py --output report.html
-              echo '![](./report.html)' >> report.md
-              cml comment create --publish report.md
+      - run: |
+          python new_model.py --output report.html
+          echo '![](./report.html)' >> report.md
+          cml comment create --publish report.md
