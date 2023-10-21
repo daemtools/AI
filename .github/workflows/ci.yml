@@ -45,4 +45,4 @@ jobs:
       uses: iterative/setup-cml@v1
 
     - name: Run CML Workflow
-      run: cml-runner launch --driver github --repo daemtools/AI --token ${{ secrets.GITHUB_TOKEN }}
+      run: cml-runner launch --driver github --repo https://github.com/daemtools/AI --token ${{ secrets.GITHUB_TOKEN }}
