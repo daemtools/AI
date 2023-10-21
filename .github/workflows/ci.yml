@@ -42,7 +42,7 @@ jobs:
         fi
 
     - name: Set up CML
-      uses: iterative/cml@v1
+      uses: iterative/setup-cml@v1
 
     - name: Run CML Workflow
       run: cml-runner --token ${{ secrets.GITHUB_TOKEN }}
