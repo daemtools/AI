@@ -25,4 +25,4 @@ jobs:
         run: |
           python new_model.py --output report.html
           echo '![](./report.html)' >> report.md
-          cml comment update --publish report.md --token ${{ secrets.PAT_TOKEN }}
+          cml comment create --publish report.md --token ${{ secrets.PAT_TOKEN }}

@@ -42,7 +42,7 @@ jobs:
         fi
 
     - name: Set up CML
-      uses: iterative/setup-cml@v1
+      uses: iterative/setup-cml@v2
 
     - name: Run CML Workflow
       run: cml-runner launch --driver github --repo https://github.com/daemtools/AI --token ${{ secrets.PAT_TOKEN }}
