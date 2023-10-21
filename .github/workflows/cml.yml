@@ -2,6 +2,10 @@ version: 1
 workflows:
   version: 2
   ml-model-training:
+    on:
+      push:
+        branches:
+          - main
     jobs:
       - name: Generate Report
         runs-on: ubuntu-latest
@@ -19,10 +23,6 @@ workflows:
 
           - name: Generate Report
             run: |
-              python new_model.py
-
-          - name: Upload Report as Artifact
-            uses: actions/upload-artifact@v2
-            with:
-              name: report
-              path: report.html
+              python new_model.py --output report.html
+              echo '![](./report.html)' >> report.md
+              cml comment create --publish report.md
