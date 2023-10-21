@@ -77,8 +77,8 @@ def visualize_examples(X, y, model, num_examples=2):
         ax.legend()
 
     plt.tight_layout()
-    #plt.savefig('visualizations.png', format='png')
-    #plt.close()
+    plt.savefig('visualizations.png', format='png')
+    plt.close()
 
 def save_results(model_matrix, model_accuracy, report, X_test, y_test, num_examples, file_path):
     '''Запись результатов в html-файл'''

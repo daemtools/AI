@@ -23,6 +23,6 @@ jobs:
 
       - name: Generate Report
         run: |
-          python new_model.py --output report.html
-          echo '![](./report.html)' >> report.md
+          python new_model.py --output visualizations.png
+          echo '![](./visualizations.png)' >> report.md
           cml comment create --publish report.md --token ${{ secrets.PAT_TOKEN }}
