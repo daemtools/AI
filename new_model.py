@@ -82,14 +82,25 @@ def visualize_examples(X, y, model, num_examples=2):
     print("Visualization results saved to png file")
 
 def save_results(model_matrix, model_accuracy, report, file_path):
-    '''Запись результатов в файл'''
+    '''Запись результатов в png-файл'''
     model_matrix_df = pd.DataFrame(model_matrix, columns=['Predicted Benign', 'Predicted Malignant'], index=['Actual Benign', 'Actual Malignant'])
-    with open(file_path, "w") as file:
-        file.write("Confusion Matrix:\n")
-        file.write(model_matrix_df.to_string() + "\n\n")
-        file.write("Accuracy: " + str(round(model_accuracy, 2)))
-        file.write("\n\n" + "Report:\n")
-        file.write(report)
+    fig, ax = plt.subplots(figsize=(8, 6))
+
+    im = ax.imshow(model_matrix, interpolation='nearest', cmap=plt.cm.Blues)
+    ax.set_xticks(np.arange(2))
+    ax.set_yticks(np.arange(2))
+    ax.set_xticklabels(['Benign', 'Malignant'])
+    ax.set_yticklabels(['Benign', 'Malignant'])
+    ax.set_title('Confusion Matrix')
+
+    for i in range(2):
+        for j in range(2):
+            text = ax.text(j, i, str(model_matrix[i, j]), ha='center', va='center', color='white' if model_matrix[i, j] > model_matrix.max() / 2 else 'black')
+
+    content = "Confusion Matrix:\n" + model_matrix_df.to_string() + "\n\nAccuracy: " + str(round(model_accuracy, 2)) + "\n\nReport:\n" + report
+    ax.text(2.5, 1.0, content, fontsize=12, va='top')
+    plt.savefig(file_path, bbox_inches='tight')
+    print("Classification results saved to", file_path)
 
 if __name__ == "__main__":
     cancer = load_breast_cancer_data()
@@ -98,7 +109,5 @@ if __name__ == "__main__":
     model, model_matrix, model_accuracy, report = train_and_evaluate_model(X_train, y_train, X_test, y_test)
     num_examples = 2
     visualize_examples(X_test, y_test, model, num_examples)
-    file_path = "predict.txt"
-    save_results(model_matrix, model_accuracy, report, file_path)
-    print("Classification results saved to", file_path)
+    save_results(model_matrix, model_accuracy, report, "results.png")
     warnings.filterwarnings("ignore", category=ConvergenceWarning)

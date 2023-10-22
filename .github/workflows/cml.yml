@@ -23,8 +23,7 @@ jobs:
 
       - name: Generate Report
         run: |
-          python new_model.py --output visualizations.png predict.txt
-          echo '## Predictions' >> report.md
-          cat predict.txt >> report.md
+          python new_model.py --output results.png visualizations.png
+          echo '![](./results.png)' >> report.md
           echo '![](./visualizations.png)' >> report.md
           cml comment create --publish report.md --token ${{ secrets.PAT_TOKEN }}
