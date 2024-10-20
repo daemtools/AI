@@ -25,18 +25,18 @@ jobs:
       run: ls -l
 
     - name: Run Tests
-      run: python test.py
+      run: python Lab1/test.py
 
     - name: Check Predictions
       run: |
-        if ! cmp --silent predict.txt expected_predict.txt; then
+        if ! cmp --silent Lab1/predict.txt Lab1/expected_predict.txt; then
           echo "Predictions do not match expected results."
           exit 1
         fi
 
     - name: Check Synthetic Results
       run: |
-        if ! cmp --silent synthetic_results.txt expected_synthetic_results.txt; then
+        if ! cmp --silent Lab1/synthetic_results.txt Lab1/expected_synthetic_results.txt; then
           echo "Synthetic results do not match expected results."
           exit 1
         fi
