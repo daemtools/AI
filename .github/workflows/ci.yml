@@ -19,7 +19,7 @@ jobs:
         python-version: 3.11.2
 
     - name: Install Dependencies
-      run: pip install -r requirements.txt
+      run: pip install -r Lab1/requirements.txt
 
     - name: List Files
       run: ls -l

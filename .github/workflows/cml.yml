@@ -16,7 +16,7 @@ jobs:
           python-version: 3.11.2
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r Lab1/requirements.txt
 
       - name: Set up CML
         uses: iterative/setup-cml@v2
