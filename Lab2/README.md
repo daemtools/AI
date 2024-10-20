@@ -62,105 +62,105 @@
 
 Пример 1:
 
-![Эталон](/result/Example_1/sphere.jpg)
+![Эталон](result/Example_1/sphere.jpg)
 
-![Результат прямого сопоставления эталона](/result/Example_1/TemplateMatch_sphere.png)
+![Результат прямого сопоставления эталона](result/Example_1/TemplateMatch_sphere.png)
 
-![Результат сопоставления с использованием ключевых точек](/result/Example_1/FeatureMatch_sphere.png)
+![Результат сопоставления с использованием ключевых точек](result/Example_1/FeatureMatch_sphere.png)
 
-![Соответствие ключевых точек](/result/Example_1/sphere_features.png)
+![Соответствие ключевых точек](result/Example_1/sphere_features.png)
 
 Пример 2:
 
-![Эталон](/result/Example_2/cock.jpg)
+![Эталон](result/Example_2/cock.jpg)
 
-![Результат прямого сопоставления эталона](/result/Example_2/TemplateMatch_cock.png)
+![Результат прямого сопоставления эталона](result/Example_2/TemplateMatch_cock.png)
 
-![Результат сопоставления с использованием ключевых точек](/result/Example_2/FeatureMatch_cock.png)
+![Результат сопоставления с использованием ключевых точек](result/Example_2/FeatureMatch_cock.png)
 
-![Соответствие ключевых точек](/result/Example_2/cock_features.png)
+![Соответствие ключевых точек](result/Example_2/cock_features.png)
 
 Пример 3:
 
-![Эталон](/result/Example_3/cylinder.jpg)
+![Эталон](result/Example_3/cylinder.jpg)
 
-![Результат прямого сопоставления эталона](/result/Example_3/TemplateMatch_cylinder.png)
+![Результат прямого сопоставления эталона](result/Example_3/TemplateMatch_cylinder.png)
 
-![Результат сопоставления с использованием ключевых точек](/result/Example_3/FeatureMatch_cylinder.png)
+![Результат сопоставления с использованием ключевых точек](result/Example_3/FeatureMatch_cylinder.png)
 
-![Соответствие ключевых точек](/result/Example_3/cylinder_features.png)
+![Соответствие ключевых точек](result/Example_3/cylinder_features.png)
 
 Пример 4:
 
-![Эталон](/result/Example_4/skyscraper.jpg)
+![Эталон](result/Example_4/skyscraper.jpg)
 
-![Результат прямого сопоставления эталона](/result/Example_4/TemplateMatch_skyscraper.png)
+![Результат прямого сопоставления эталона](result/Example_4/TemplateMatch_skyscraper.png)
 
-![Результат сопоставления с использованием ключевых точек](/result/Example_4/FeatureMatch_skyscraper.png)
+![Результат сопоставления с использованием ключевых точек](result/Example_4/FeatureMatch_skyscraper.png)
 
-![Соответствие ключевых точек](/result/Example_4/skyscraper_features.png)
+![Соответствие ключевых точек](result/Example_4/skyscraper_features.png)
 
 Пример 5:
 
-![Эталон](/result/Example_5/pot.jpg)
+![Эталон](result/Example_5/pot.jpg)
 
-![Результат прямого сопоставления эталона](/result/Example_5/TemplateMatch_pot.png)
+![Результат прямого сопоставления эталона](result/Example_5/TemplateMatch_pot.png)
 
-![Результат сопоставления с использованием ключевых точек](/result/Example_5/FeatureMatch_pot.png)
+![Результат сопоставления с использованием ключевых точек](result/Example_5/FeatureMatch_pot.png)
 
-![Соответствие ключевых точек](/result/Example_5/pot_features.png)
+![Соответствие ключевых точек](result/Example_5/pot_features.png)
 
 Пример 6:
 
-![Эталон](/result/Example_6/letter.jpg)
+![Эталон](result/Example_6/letter.jpg)
 
-![Результат прямого сопоставления эталона](/result/Example_6/TemplateMatch_letter.png)
+![Результат прямого сопоставления эталона](result/Example_6/TemplateMatch_letter.png)
 
-![Результат сопоставления с использованием ключевых точек](/result/Example_6/FeatureMatch_letter.png)
+![Результат сопоставления с использованием ключевых точек](result/Example_6/FeatureMatch_letter.png)
 
-![Соответствие ключевых точек](/result/Example_6/letter_features.png)
+![Соответствие ключевых точек](result/Example_6/letter_features.png)
 
 Пример 7:
 
-![Эталон](/result/Example_7/eifel.jpg)
+![Эталон](result/Example_7/eifel.jpg)
 
-![Результат прямого сопоставления эталона](/result/Example_7/TemplateMatch_eifel.png)
+![Результат прямого сопоставления эталона](result/Example_7/TemplateMatch_eifel.png)
 
-![Результат сопоставления с использованием ключевых точек](/result/Example_7/FeatureMatch_eifel.png)
+![Результат сопоставления с использованием ключевых точек](result/Example_7/FeatureMatch_eifel.png)
 
-![Соответствие ключевых точек](/result/Example_7/eifel_features.png)
+![Соответствие ключевых точек](result/Example_7/eifel_features.png)
 
 Пример 8:
 
-![Эталон](/result/Example_8/cauliflower.jpg)
+![Эталон](result/Example_8/cauliflower.jpg)
 
-![Результат прямого сопоставления эталона](/result/Example_8/TemplateMatch_cauliflower.png)
+![Результат прямого сопоставления эталона](result/Example_8/TemplateMatch_cauliflower.png)
 
-![Результат сопоставления с использованием ключевых точек](/result/Example_8/FeatureMatch_cauliflower.png)
+![Результат сопоставления с использованием ключевых точек](result/Example_8/FeatureMatch_cauliflower.png)
 
-![Соответствие ключевых точек](/result/Example_8/cauliflower_features.png)
+![Соответствие ключевых точек](result/Example_8/cauliflower_features.png)
 
 Пример 9:
 
-![Эталон](/result/Example_9/spades.jpg)
+![Эталон](result/Example_9/spades.jpg)
 
-![Результат прямого сопоставления эталона](/result/Example_9/TemplateMatch_spades.png)
+![Результат прямого сопоставления эталона](result/Example_9/TemplateMatch_spades.png)
 
-![Результат сопоставления с использованием ключевых точек](/result/Example_9/FeatureMatch_spades.png)
+![Результат сопоставления с использованием ключевых точек](result/Example_9/FeatureMatch_spades.png)
 
-![Соответствие ключевых точек](/result/Example_9/spades_features.png)
+![Соответствие ключевых точек](result/Example_9/spades_features.png)
 
 Пример 10 (сравнение двух разных изображений):
 
-![Эталон](/result/Example_10/cat_template.jpg)
+![Эталон](result/Example_10/cat_template.jpg)
 
-![Целевое изображение](/result/Example_10/cat_input.jpg)
+![Целевое изображение](result/Example_10/cat_input.jpg)
 
-![Результат прямого сопоставления эталона](/result/Example_10/TemplateMatch_cat.png)
+![Результат прямого сопоставления эталона](result/Example_10/TemplateMatch_cat.png)
 
-![Результат сопоставления с использованием ключевых точек](/result/Example_10/FeatureMatch_cat.png)
+![Результат сопоставления с использованием ключевых точек](result/Example_10/FeatureMatch_cat.png)
 
-![Соответствие ключевых точек](/result/Example_10/cat_features.png)
+![Соответствие ключевых точек](result/Example_10/cat_features.png)
 
 ## Выводы
 
